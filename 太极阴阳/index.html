@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #yinyang {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 1px solid #000;
+      background: linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #000000 50%, #000000 100%);
+      animation: spin linear 1s infinite;
+    }
+
+    #yinyang::before {
+      content: "";
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border: 40px solid #000;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+
+    #yinyang::after {
+      content: "";
+      position: absolute;
+      top: 50px;
+      right: 0;
+      width: 20px;
+      height: 20px;
+      border: 40px solid #fff;
+      border-radius: 50%;
+      background-color: #000;
+    }
+    @keyframes spin {
+      0%{
+        transform: rotate(0deg);
+      }
+      100%{
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="yinyang">
+    1
+    2
+    3
+    4
+    5
+
+  </div>
+</body>
+
+</html>
